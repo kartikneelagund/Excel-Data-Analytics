@@ -13,7 +13,7 @@ const EditedUsers = () => {
 
   const fetchEditedUsers = async () => {
     try {
-      const res = await axios.get("http://localhost:8080/api/userscrud");
+      const res = await axios.get("https://excel-data-analytics-backend.vercel.app/api/userscrud");
 
       // Filter users with 'status' === 'edited'
       const edited = res.data.filter(user => user.status === "edited");

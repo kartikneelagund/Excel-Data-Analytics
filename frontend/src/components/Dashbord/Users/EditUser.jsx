@@ -28,7 +28,7 @@ export default function EditUser({ fid, closeEvent }) {
     }
 
     try {
-      await axios.put(`http://localhost:8080/api/userscrud/${fid.id}`, {
+      await axios.put(`https://excel-data-analytics-backend.vercel.app/api/userscrud/${fid.id}`, {
         firstName,
         lastName,
         email,
@@ -51,7 +51,7 @@ export default function EditUser({ fid, closeEvent }) {
   // Refresh user list from backend
   const fetchUsers = async () => {
     try {
-      const res = await axios.get("http://localhost:8080/api/userscrud");
+      const res = await axios.get("https://excel-data-analytics-backend.vercel.app/api/userscrud");
       setRows(res.data.map((u) => ({
         id: u._id,
         firstName: u.firstName,

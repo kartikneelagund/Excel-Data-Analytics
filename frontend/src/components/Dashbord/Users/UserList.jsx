@@ -76,7 +76,7 @@ export default function UsersList() {
   // Fetch all users
   const getUsers = async () => {
     try {
-      const res = await axios.get("http://localhost:8080/api/userscrud");
+      const res = await axios.get("https://excel-data-analytics-backend.vercel.app/api/userscrud");
       const activeUsers = res.data.filter((u) => u.status !== "deleted");
       setRows(
         activeUsers.map((u) => ({
@@ -95,7 +95,7 @@ export default function UsersList() {
   // Delete user (admin only)
   const deleteUser = async (id) => {
     try {
-      await axios.delete(`http://localhost:8080/api/userscrud/${id}`);
+      await axios.delete(`https://excel-data-analytics-backend.vercel.app/api/userscrud/${id}`);
       Swal.fire("Deleted!", "User has been permanently deleted.", "success");
 
       const deletedIds = JSON.parse(localStorage.getItem("deletedUserIds") || "[]");

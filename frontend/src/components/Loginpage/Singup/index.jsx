@@ -23,7 +23,7 @@ const Signup = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const url = "http://localhost:8080/api/users";
+      const url = "https://excel-data-analytics-backend.vercel.app/api/users";
 
       // Only include secretKey if role = admin
       const payload =
