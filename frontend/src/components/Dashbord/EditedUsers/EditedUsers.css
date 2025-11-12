@@ -1,0 +1,51 @@
+/* Grid C3 container */
+.grid-box2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #1e1e1e;
+  padding: 16px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.grid-box2:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+  background-color: #29221d;
+}
+
+/* Optional: interactive child elements */
+.grid-box2 > * {
+  transition: transform 0.2s ease, color 0.3s ease;
+}
+
+.grid-box2 > *:hover {
+  transform: scale(1.05);
+  color: #1e88e5; /* highlight color on hover */
+}
+
+/* Responsive rules */
+@media screen and (max-width: 992px) {
+  .grid-c2 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    height: 240px;
+  }
+}
+
+/* Fade-in animation on load */
+.grid-box2 {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

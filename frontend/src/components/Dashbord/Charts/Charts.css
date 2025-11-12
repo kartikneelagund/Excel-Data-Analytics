@@ -1,0 +1,221 @@
+/* Grid c5 */
+.grid-c5 .grid-c-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.grid-c5-content {
+  margin-top: 20px;
+  border-radius: 16px;
+}
+
+.grid-c5 .grid-c5-content {
+  padding: 12px;
+}
+
+.grid-c5 .grid-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 24px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.grid-c5 .grid-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.grid-c5 .grid-item-l {
+  display: flex;
+  align-items: flex-start;
+  column-gap: 16px;
+}
+
+.grid-c5 .grid-item-l .icon {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.grid-c5 .grid-item-l .icon img {
+  width: 20px;
+  transition: transform 0.3s ease;
+}
+
+.grid-c5 .grid-item-l .icon img:hover {
+  transform: scale(1.2);
+}
+
+.grid-c5 .grid-item-l .text {
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.grid-c5 .grid-item-l .text:hover {
+  color: #007bff;
+}
+
+.grid-c5 .grid-item-l .text span {
+  font-weight: 300;
+  font-size: 15px;
+  display: block;
+  margin-top: 5px;
+  opacity: 0.9;
+}
+
+/* Chart page */
+.chart-page {
+  padding: 2rem;
+  text-align: center;
+  background-color: var(--clr-primary, #1e88e5);
+  border-radius: 8px;
+  color: white;
+  max-width: 1000px;
+  margin: auto;
+  transition: background-color 0.3s ease;
+}
+
+.chart-page:hover {
+  background-color: #1565c0;
+}
+
+.top-controls {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 1rem 0;
+}
+
+.file-input {
+  padding: 0.5rem 1rem;
+  border: 1px solid #888;
+  border-radius: 4px;
+  background-color: #333;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.file-input:hover {
+  background-color: #555;
+  transform: scale(1.05);
+}
+
+.chart-controls select {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.chart-controls select:hover {
+  transform: scale(1.05);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.download-controls {
+  margin: 1rem 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.download-controls button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.download-controls button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+.data-table {
+  overflow-x: auto;
+  margin: 2rem 0;
+  border-radius: 8px;
+}
+
+.data-table table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+  color: black;
+  transition: transform 0.3s ease;
+}
+
+.data-table th,
+.data-table td {
+  border: 1px solid #ccc;
+  padding: 0.5rem;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.data-table th {
+  background-color: #f0f0f0;
+}
+
+.data-table td:hover {
+  background-color: #e0f7fa;
+}
+
+.data-table input {
+  width: 100%;
+  padding: 4px;
+  font-size: 0.9rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  transition: border-color 0.3s ease;
+}
+
+.data-table input:focus {
+  outline: none;
+  border-color: #315b87;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.chart-wrapper {
+  background: white;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-top: 2rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.chart-wrapper:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+
+.chart-controls label {
+  color: white;
+}
+
+/* Material-UI Table Container */
+.css-wvdz86-MuiTableContainer-root {
+  width: 100%;
+  overflow-x: auto;
+  max-height: 700px;
+  transition: transform 0.3s ease;
+}
+
+.css-wvdz86-MuiTableContainer-root:hover {
+  transform: scale(1.01);
+}

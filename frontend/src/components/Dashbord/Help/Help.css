@@ -1,0 +1,147 @@
+/* Grid C8 progress fill */
+.grid-c8 .grid-item-fill {
+  width: 60%;
+  height: 10px;
+  background-color: #ff9800; /* fallback for var(--clr-pumpkin) */
+  border-radius: 100vh;
+  transition: width 0.4s ease, background-color 0.3s ease;
+}
+
+.grid-c8 .grid-item:hover .grid-item-fill {
+  width: 85%; /* Interactive fill on hover */
+  background-color: #ffb74d;
+}
+
+/* Help container */
+.help-container {
+  padding: 20px;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #121212;
+  border-radius: 12px;
+  color: #fff;
+  transition: background-color 0.3s ease;
+}
+
+/* Help title */
+.help-title h1 {
+  color: #1e88e5;
+  margin-bottom: 5px;
+  transition: color 0.3s ease;
+}
+
+.help-title h1:hover {
+  color: #42a5f5;
+}
+
+.sub-title {
+  color: #bab9b9;
+  margin-bottom: 20px;
+}
+
+/* Content split */
+.help-content-split {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  transition: all 0.3s ease;
+  color: #3b3a39;
+}
+
+/* Left side - FAQ */
+.faq-section {
+  flex: 1;
+  min-width: 280px;
+  background: #1e1e1e;
+  padding: 20px;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.faq-section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+  background-color: #29221d;
+}
+
+.faq-section h2 {
+  margin-bottom: 10px !important;
+  color: #fff;
+  cursor: default;
+}
+
+.faq-item {
+  margin-bottom: 20px;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.faq-item:hover {
+  transform: scale(1.02);
+  background-color: #2a2a2a;
+  border-radius: 6px;
+  padding: 8px;
+}
+
+/* Right side - Contact */
+.contact-section {
+  flex: 1;
+  min-width: 280px;
+  background: #1e88e5;
+  padding: 20px;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+}
+
+.contact-section h2 {
+  color: #fff;
+  cursor: default;
+}
+
+/* Form inputs */
+form input,
+form textarea {
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #555;
+  border-radius: 5px;
+  background-color: #1e1e1e;
+  color: #fff;
+  transition: border 0.3s ease, background-color 0.3s ease;
+}
+
+form input:focus,
+form textarea:focus {
+  border-color: #42a5f5;
+  outline: none;
+  background-color: #29221d;
+}
+
+/* Form button */
+form button {
+  background-color: #1e88e5;
+  color: #f3e6e6;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #1565c0;
+  transform: scale(1.05);
+}
+
+/* Cursor defaults */
+.help-title,
+.faq-section,
+.lg-value,
+.contact-section h2 {
+  cursor: default;
+}

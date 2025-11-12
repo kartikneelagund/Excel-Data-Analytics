@@ -1,0 +1,46 @@
+/* Main content area */
+.main-content {
+  background-color: rgb(35, 120, 248);
+  flex: 1;
+  padding: 32px;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  cursor: default;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* Hover effect */
+.main-content:hover {
+  transform: translateY(-5px) scale(1.01);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+  background-color: rgb(45, 135, 255); /* Slight color shift on hover */
+}
+
+/* Responsive rules */
+@media screen and (max-width: 1400px) {
+  .main-content {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .main-content {
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+}
+
+/* Optional: fade-in animation on page load */
+.main-content {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

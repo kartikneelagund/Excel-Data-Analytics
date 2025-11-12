@@ -1,0 +1,152 @@
+/* Grid container */
+.grid-c7 .grid-c-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.ai-container {
+  cursor: default;
+  max-width: 750px;
+  margin: 10px auto;
+  padding: 10px;
+  font-family: 'Segoe UI', sans-serif;
+  color: #333;
+}
+
+h1 {
+  color: #1e88e5;
+}
+
+/* Grid cards container */
+.grid-c7-content {
+  margin-top: 20px;
+  border-radius: 16px;
+}
+
+.grid-c7 .grid-c4-content {
+  padding: 12px;
+}
+
+.grid-c7 .grid-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 24px;
+}
+
+.grid-c7 .grid-item-l {
+  display: flex;
+  align-items: flex-start;
+  column-gap: 16px;
+}
+
+.grid-c7 .grid-item-l .icon {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.grid-c7 .grid-item-l .icon img {
+  width: 20px;
+}
+
+.grid-c7 .grid-item-l .text {
+  font-weight: 600;
+}
+
+.grid-c7 .grid-item-l .text span {
+  font-weight: 300;
+  font-size: 15px;
+  display: block;
+  margin-top: 5px;
+  opacity: 0.9;
+}
+
+/* Insight Cards */
+.insight-card {
+  background-color: #f3e5f5;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.insight-card:hover {
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+  background-color: #e1bee7;
+}
+
+.insight-card h3 {
+  color: #1e88e5;
+  margin-bottom: 10px;
+  transition: color 0.3s ease;
+}
+
+.insight-card:hover h3 {
+  color: #7b1fa2;
+}
+
+.insight-card ul {
+  padding-left: 18px;
+  margin: 0;
+  transition: color 0.3s ease;
+}
+
+.sub-title {
+  color: rgb(156, 156, 156);
+}
+
+/* Grid layout */
+.insight-grid,
+.limited {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+/* Hide cards after index 1 (limited view) */
+.insight-grid.limited .insight-card:nth-child(n+3) {
+  display: none;
+}
+
+/* Button container */
+.see-more-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Button styling */
+.see-more-btn {
+  padding: 10px 20px;
+  background-color: #007BFF; /* Blue */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.see-more-btn:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+/* Smooth reveal transition for hidden cards */
+.insight-card.hidden {
+  display: none;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.insight-card.visible {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}

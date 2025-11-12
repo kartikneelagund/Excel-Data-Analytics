@@ -1,0 +1,181 @@
+/* Ensure full height is used */
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #121212;
+  color: #fff;
+}
+
+/* Main layout wrapper */
+.main-content-holder {
+  display: grid;
+  row-gap: 16px;
+  min-height: 100vh;
+  padding: 16px;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+
+/* Top grid with 4 stats */
+.content-grid-one {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 16px;
+}
+
+.content-grid-one .stat-card {
+  background: #1e1e1e;
+  padding: 16px;
+  border-radius: 8px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.content-grid-one .stat-card:hover {
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.3);
+  background-color: #29221d;
+}
+
+/* Bottom grid with charts and users */
+.content-grid-two {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 16px;
+  row-gap: 16px;
+}
+
+.grid-two-item {
+  display: flex;
+  flex-direction: column;
+  background: #29221d;
+  padding: 16px;
+  border-radius: 8px;
+  min-height: 250px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  overflow: auto;
+  cursor: default;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.grid-two-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* Nested user subgrid */
+.subgrid-two {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  height: 100%;
+  gap: 12px;
+}
+
+.subgrid-two .subgrid-two-item {
+  background: #1e1e1e;
+  padding: 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.3s ease;
+}
+
+.subgrid-two .subgrid-two-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  background-color: #2a1f18;
+}
+
+/* Scrollbar styling for overflow areas */
+.grid-two-item::-webkit-scrollbar,
+.subgrid-two::-webkit-scrollbar {
+  width: 8px;
+}
+
+.grid-two-item::-webkit-scrollbar-thumb,
+.subgrid-two::-webkit-scrollbar-thumb {
+  background-color: #555;
+  border-radius: 4px;
+}
+
+.grid-two-item::-webkit-scrollbar-track,
+.subgrid-two::-webkit-scrollbar-track {
+  background: #1e1e1e;
+}
+
+/* Responsive rules */
+@media screen and (max-width: 1200px) {
+  .content-grid-one,
+  .content-grid-two {
+    column-gap: 12px;
+  }
+  .main-content-holder,
+  .subgrid-two {
+    row-gap: 12px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .content-grid-one {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 12px;
+  }
+
+  .content-grid-two {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 12px;
+  }
+
+  .content-grid-two .grid-two-item:nth-child(3) {
+    grid-column: 1 / -1;
+  }
+
+  .content-grid-two .grid-two-item:nth-child(3) .subgrid-two {
+    grid-template-columns: repeat(2, 1fr);
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .content-grid-one,
+  .content-grid-two {
+    grid-template-columns: 1fr;
+    column-gap: 0;
+  }
+
+  .content-grid-two .grid-two-item:nth-child(3) .subgrid-two {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+
+  .content-grid-two .grid-two-item:nth-child(3) .subgrid-two .subgrid-two-item {
+    height: auto;
+  }
+}
+
+/* Animate cards on page load */
+.grid-two-item, .subgrid-two .subgrid-two-item, .content-grid-one .stat-card {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Stagger animation for better effect */
+.content-grid-one .stat-card:nth-child(1) { animation-delay: 0s; }
+.content-grid-one .stat-card:nth-child(2) { animation-delay: 0.1s; }
+.content-grid-one .stat-card:nth-child(3) { animation-delay: 0.2s; }
+.content-grid-one .stat-card:nth-child(4) { animation-delay: 0.3s; }
+
+.content-grid-two .grid-two-item:nth-child(1) { animation-delay: 0.1s; }
+.content-grid-two .grid-two-item:nth-child(2) { animation-delay: 0.2s; }
+.content-grid-two .grid-two-item:nth-child(3) { animation-delay: 0.3s; }

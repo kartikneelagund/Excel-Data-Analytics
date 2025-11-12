@@ -1,0 +1,63 @@
+/* grid c4 */
+.grid-c4 .grid-c-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.grid-c4-content {
+  margin-top: 20px;
+  border-radius: 16px;
+}
+.grid-c4 .grid-c4-content {
+  padding: 12px;
+}
+.grid-c4 .grid-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 24px;
+}
+.grid-c4 .grid-item-l {
+  display: flex;
+  align-items: flex-start;
+  column-gap: 16px;
+}
+.grid-c4 .grid-item-l .icon {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+.grid-c4 .grid-item-l .icon img {
+  width: 20px;
+}
+.grid-c4 .grid-item-l .text {
+  font-weight: 600;
+}
+.grid-c4 .grid-item-l .text span {
+  font-weight: 300;
+  font-size: 15px;
+  display: block;
+  margin-top: 5px;
+  opacity: 0.9;
+}
+/* Target all tabs inside the .tabs wrapper */
+.tabs .MuiTab-root {
+  color: white;            /* Default tab text color */
+  font-weight: 500;
+}
+
+/* Style the selected (active) tab */
+.tabs .Mui-selected {
+  color: white;            /* Selected tab text color */
+  font-weight: bold;
+}
+
+/* Change the indicator (underline) color */
+.tabs .MuiTabs-indicator {
+  background-color: white;
+}
+
+.tabs .MuiTab-root {
+  text-transform: none; /* 👈 disables ALL CAPS */
+ font-size: 16px;
+}

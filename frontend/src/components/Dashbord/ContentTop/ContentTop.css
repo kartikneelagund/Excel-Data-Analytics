@@ -1,0 +1,97 @@
+/* Main content top */
+.main-content-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  background-color: #1a1a1a;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.main-content-top:hover {
+  background-color: #2a2a2a;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* Sidebar toggler */
+.sidebar-toggler {
+  display: flex;
+  align-items: center;
+  margin-right: 12px;
+  cursor: pointer;
+  transition: transform 0.2s ease, filter 0.3s ease;
+}
+
+.sidebar-toggler:hover {
+  transform: scale(1.1);
+  filter: brightness(1.2);
+}
+
+.sidebar-toggler img {
+  width: 20px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.sidebar-toggler img:hover {
+  transform: rotate(15deg);
+  filter: brightness(1.1);
+}
+
+/* Top title */
+.content-top-title {
+  color: #fff; /* var(--clr-white) fallback */
+  font-size: 20px;
+  font-weight: 600;
+  cursor: default;
+  transition: color 0.3s ease;
+}
+
+.content-top-title:hover {
+  color: #1e88e5;
+}
+
+/* Top buttons */
+.content-top-btn {
+  color: brown;
+  margin-left: 18px;
+  cursor: pointer;
+  transition: transform 0.2s ease, filter 0.3s ease;
+}
+
+.content-top-btn img {
+  width: 32px;
+  transition: transform 0.2s ease, filter 0.3s ease;
+}
+
+.content-top-btn:hover img {
+  transform: scale(1.1) rotate(10deg);
+  filter: grayscale(80%) brightness(0.8);
+}
+
+/* Content top left container */
+.content-top-left {
+  display: flex;
+  align-items: center;
+}
+
+/* White buttons hover effect */
+.white_btn {
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.white_btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* Global image hover effect */
+img {
+  transition: filter 0.3s ease, transform 0.2s ease;
+}
+
+img:hover {
+  transform: scale(1.05);
+}
