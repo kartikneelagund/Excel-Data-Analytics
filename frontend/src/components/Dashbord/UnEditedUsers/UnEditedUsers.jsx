@@ -13,7 +13,7 @@ const UnEditedUsers = () => {
 
   const fetchUnEditedUsers = async () => {
     try {
-      const res = await axios.get("http://localhost:8080/api/userscrud");
+      const res = await axios.get("https://excel-data-analytics-backend.vercel.app/api/userscrud");
 
       // Filter users that are NOT marked as edited
       const unedited = res.data.filter(
